@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ort Farms | Pick Your Own, Farm Market & Festivals in Long Valley, NJ</title>
+<meta name="description" content="Ort Farms is a 6-generation family farm in Long Valley, NJ. Pick-your-own strawberries, apples & pumpkins, a fresh farm market, homemade ice cream, CSA shares & seasonal festivals.">
+<link rel="canonical" href="https://www.ortfarms.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- LocalBusiness / Farm schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Ort Farms",
+  "image": "https://www.ortfarms.com/og-image.jpg",
+  "url": "https://www.ortfarms.com",
+  "telephone": "+1-908-876-3351",
+  "email": "info@ortfarms.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "25 Bartley Rd",
+    "addressLocality": "Long Valley",
+    "addressRegion": "NJ",
+    "postalCode": "07853",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "08:00", "closes": "19:00"
+  }],
+  "sameAs": [
+    "https://www.instagram.com/ort_farms",
+    "https://www.facebook.com/ortfarms"
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --ink:#26200f;
+    --cream:#f6f0e2;
+    --paper:#fdfaf2;
+    --barn:#a6321f;
+    --barn-deep:#7d2415;
+    --leaf:#4f6b2e;
+    --leaf-deep:#36491f;
+    --gold:#e0a32e;
+    --berry:#b5283f;
+    --line:rgba(38,32,15,.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Archivo',sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{font-family:'Fraunces',serif;line-height:1.05}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+
+  /* ---- Top status bar ---- */
+  .topbar{
+    background:var(--leaf-deep);color:var(--cream);
+    font-size:.8rem;letter-spacing:.04em;text-align:center;
+    padding:7px 12px;font-weight:500;
+  }
+  .topbar b{color:var(--gold)}
+
+  /* ---- Header / Nav ---- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(253,250,242,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;max-width:1200px;margin:0 auto}
+  .logo{font-family:'Fraunces';font-weight:900;font-size:1.5rem;letter-spacing:-.02em;color:var(--barn-deep);display:flex;align-items:center;gap:9px}
+  .logo svg{width:30px;height:30px}
+  .menu{display:flex;gap:4px;list-style:none;align-items:center}
+  .menu>li{position:relative}
+  .menu>li>a{
+    display:block;padding:10px 14px;font-weight:600;font-size:.92rem;
+    border-radius:8px;transition:.2s;cursor:pointer
+  }
+  .menu>li>a:hover{background:var(--cream);color:var(--barn)}
+  .dropdown{
+    position:absolute;top:100%;left:0;min-width:215px;
+    background:var(--paper);border:1px solid var(--line);border-radius:12px;
+    box-shadow:0 18px 40px rgba(38,32,15,.16);
+    padding:8px;opacity:0;visibility:hidden;transform:translateY(8px);
+    transition:.22s;
+  }
+  .menu>li:hover .dropdown{opacity:1;visibility:visible;transform:translateY(4px)}
+  .dropdown a{display:block;padding:9px 13px;border-radius:7px;font-size:.88rem;font-weight:500}
+  .dropdown a:hover{background:var(--cream);color:var(--barn)}
+  .cta-btn{
+    background:var(--barn);color:var(--cream)!important;font-weight:700;
+    padding:11px 20px!important;border-radius:30px;font-size:.9rem;
+    box-shadow:0 6px 16px rgba(166,50,31,.32);transition:.2s
+  }
+  .cta-btn:hover{background:var(--barn-deep)!important;transform:translateY(-2px)}
+  .burger{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--ink)}
+
+  /* ---- Hero ---- */
+  .hero{
+    position:relative;padding:90px 0 80px;
+    background:
+      radial-gradient(circle at 80% 15%, rgba(224,163,46,.18), transparent 45%),
+      linear-gradient(160deg,#fbf4e3 0%, #f2e6cb 100%);
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(var(--line) 1px, transparent 1px);
+    background-size:22px 22px;opacity:.4;
+  }
+  .hero-inner{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+  .eyebrow{
+    display:inline-block;background:var(--leaf);color:var(--cream);
+    font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    padding:6px 14px;border-radius:30px;margin-bottom:22px
+  }
+  .hero h1{font-size:clamp(2.6rem,5.5vw,4.6rem);font-weight:900;letter-spacing:-.02em;color:var(--ink)}
+  .hero h1 em{color:var(--barn);font-style:italic}
+  .hero p.lead{font-size:1.18rem;margin:22px 0 30px;max-width:520px;color:#4a4327}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:32px;
+    font-weight:700;font-size:.98rem;transition:.2s;cursor:pointer;border:2px solid transparent
+  }
+  .btn-primary{background:var(--barn);color:var(--cream);box-shadow:0 8px 22px rgba(166,50,31,.3)}
+  .btn-primary:hover{background:var(--barn-deep);transform:translateY(-2px)}
+  .btn-ghost{border-color:var(--ink);color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--cream)}
+  .hero-card{
+    position:relative;background:var(--paper);border-radius:22px;padding:30px;
+    border:1px solid var(--line);box-shadow:0 24px 60px rgba(38,32,15,.14);
+    transform:rotate(1.4deg)
+  }
+  .hero-card h3{font-size:1.35rem;margin-bottom:6px;color:var(--barn-deep)}
+  .hero-card .berry-tag{font-size:.78rem;font-weight:700;color:var(--leaf);text-transform:uppercase;letter-spacing:.1em}
+  .hours-row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dashed var(--line);font-size:.94rem}
+  .hours-row:last-of-type{border:0}
+  .hours-row b{font-weight:700}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--leaf);display:inline-block;margin-right:7px;box-shadow:0 0 0 4px rgba(79,107,46,.2)}
+
+  /* ---- Section base ---- */
+  section{padding:80px 0}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 50px}
+  .sec-head .kicker{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--barn)}
+  .sec-head h2{font-size:clamp(2rem,3.8vw,3rem);font-weight:900;margin:12px 0 14px}
+  .sec-head p{color:#5b5333;font-size:1.05rem}
+
+  /* ---- Seasonal banner ---- */
+  .season{background:linear-gradient(135deg,var(--berry),var(--barn-deep));color:var(--cream);position:relative;overflow:hidden}
+  .season::after{content:"🍓";position:absolute;font-size:16rem;right:-10px;bottom:-50px;opacity:.12;transform:rotate(-15deg)}
+  .season .inner{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;position:relative;z-index:2}
+  .season .kicker{color:var(--gold)}
+  .season h2{font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:#fff;margin:8px 0 12px}
+  .season p{font-size:1.08rem;opacity:.93;max-width:560px}
+  .season .btn-primary{background:var(--gold);color:var(--ink)}
+  .season .btn-primary:hover{background:#f3b942}
+
+  /* ---- Explore grid ---- */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{
+    background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    transition:.25s;position:relative
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(38,32,15,.14);border-color:var(--barn)}
+  .card .ph{height:160px;background:var(--leaf);display:flex;align-items:center;justify-content:center;font-size:3.4rem}
+  .card:nth-child(1) .ph{background:linear-gradient(135deg,#b5283f,#7d2415)}
+  .card:nth-child(2) .ph{background:linear-gradient(135deg,#e0a32e,#b97d18)}
+  .card:nth-child(3) .ph{background:linear-gradient(135deg,#d98a8a,#a6321f)}
+  .card:nth-child(4) .ph{background:linear-gradient(135deg,#4f6b2e,#36491f)}
+  .card:nth-child(5) .ph{background:linear-gradient(135deg,#6b8e3d,#4f6b2e)}
+  .card:nth-child(6) .ph{background:linear-gradient(135deg,#c98a2e,#8a5a14)}
+  .card .body{padding:22px}
+  .card h3{font-size:1.3rem;margin-bottom:7px}
+  .card p{font-size:.92rem;color:#5b5333;margin-bottom:14px}
+  .card .lnk{font-weight:700;color:var(--barn);font-size:.9rem;display:inline-flex;align-items:center;gap:6px}
+  .card:hover .lnk{gap:11px}
+
+  /* ---- Why us ---- */
+  .why{background:var(--leaf-deep);color:var(--cream)}
+  .why .sec-head h2{color:#fff}
+  .why .sec-head .kicker{color:var(--gold)}
+  .why .sec-head p{color:rgba(246,240,226,.8)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:20px}
+  .stat{text-align:center;padding:26px 16px;background:rgba(255,255,255,.06);border-radius:16px;border:1px solid rgba(255,255,255,.12)}
+  .stat .num{font-family:'Fraunces';font-weight:900;font-size:2.6rem;color:var(--gold);line-height:1}
+  .stat .lab{font-size:.9rem;margin-top:8px;opacity:.9}
+
+  /* ---- Events ---- */
+  .events .grid{grid-template-columns:repeat(3,1fr)}
+  .event{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;transition:.2s}
+  .event:hover{border-color:var(--barn);transform:translateY(-4px)}
+  .event .date{display:inline-block;background:var(--barn);color:var(--cream);font-weight:700;font-size:.78rem;padding:5px 12px;border-radius:20px;letter-spacing:.05em}
+  .event h3{font-size:1.3rem;margin:14px 0 8px}
+  .event p{font-size:.92rem;color:#5b5333;margin-bottom:14px}
+
+  /* ---- Plan visit ---- */
+  .visit{background:var(--cream)}
+  .visit .inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .visit h2{font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:900;margin-bottom:16px}
+  .info-list{list-style:none;margin-top:18px}
+  .info-list li{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);font-size:1rem}
+  .info-list .ic{font-size:1.3rem;flex-shrink:0}
+  .map-box{background:var(--leaf);border-radius:18px;height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--cream);text-align:center;padding:30px}
+  .map-box .pin{font-size:3rem;margin-bottom:10px}
+  .admission{background:var(--paper);border-left:4px solid var(--gold);padding:16px 20px;border-radius:10px;margin-top:22px;font-size:.92rem;color:#5b5333}
+
+  /* ---- Footer ---- */
+  footer{background:var(--ink);color:var(--cream);padding:60px 0 28px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;margin-bottom:40px}
+  footer h4{font-family:'Fraunces';font-size:1.4rem;font-weight:900;margin-bottom:14px;color:var(--gold)}
+  footer h5{font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px;opacity:.7}
+  footer ul{list-style:none}
+  footer ul li{padding:5px 0}
+  footer ul li a{font-size:.92rem;opacity:.85;transition:.2s}
+  footer ul li a:hover{opacity:1;color:var(--gold)}
+  .foot-contact p{font-size:.92rem;opacity:.85;margin-bottom:7px}
+  .socials{display:flex;gap:12px;margin-top:16px}
+  .socials a{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:.2s}
+  .socials a:hover{background:var(--gold);color:var(--ink)}
+  .copy{text-align:center;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:.82rem;opacity:.6}
+
+  /* ---- Responsive ---- */
+  @media(max-width:900px){
+    .menu{display:none}
+    .burger{display:block}
+    .hero-inner,.season .inner,.visit .inner{grid-template-columns:1fr}
+    .grid,.events .grid{grid-template-columns:1fr 1fr}
+    .stats{grid-template-columns:1fr 1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .hero-card{transform:none}
+  }
+  @media(max-width:560px){
+    .grid,.events .grid,.stats,.foot-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">🍓 PYO Strawberries are OPEN! &nbsp;·&nbsp; Pre-purchased tickets required this weekend &nbsp;·&nbsp; <b>Farm Market 8am–7pm</b> · Ice Cream 11am–9pm</div>
+
+<header>
+  <div class="nav">
+    <a href="/" class="logo">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2 3 9v13h6v-7h6v7h6V9z" fill="#a6321f"/><circle cx="12" cy="6" r="2" fill="#4f6b2e"/></svg>
+      Ort Farms
+    </a>
+    <nav>
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a>Pick Your Own ▾</a>
+          <div class="dropdown">
+            <a href="/strawberry-picking">Strawberry Picking</a>
+            <a href="/apple-picking">Apple Picking</a>
+            <a href="/pumpkin-picking">Pumpkin Picking</a>
+            <a href="/sunflower-picking">Sunflower Picking</a>
+            <a href="/season-pass">Season Pass</a>
+          </div>
+        </li>
+        <li><a>Farm Market ▾</a>
+          <div class="dropdown">
+            <a href="/farm-market">Fresh Produce</a>
+            <a href="/farm-fresh-bakery">Farm Fresh Bakery</a>
+            <a href="/ice-cream">Homemade Ice Cream</a>
+            <a href="/market-flowers">Market Flowers & Plants</a>
+          </div>
+        </li>
+        <li><a>Events ▾</a>
+          <div class="dropdown">
+            <a href="/fall-festival">Fall Festival</a>
+            <a href="/berries-and-brews">Berries & Brews</a>
+            <a href="/summer-saturdays">Summer Saturdays</a>
+            <a href="/events">Events Calendar</a>
+          </div>
+        </li>
+        <li><a>Groups ▾</a>
+          <div class="dropdown">
+            <a href="/birthday-parties">Birthday Parties</a>
+            <a href="/field-trips">Field Trips</a>
+            <a href="/farm-camp">Farm Camp</a>
+            <a href="/kids-corner">Kid's Corner</a>
+          </div>
+        </li>
+        <li><a>CSA ▾</a>
+          <div class="dropdown">
+            <a href="/csa">How CSA Works</a>
+            <a href="/csa-faq">CSA FAQ</a>
+            <a href="/2026-csa-welcome-packet">2026 Welcome Packet</a>
+          </div>
+        </li>
+        <li><a>About ▾</a>
+          <div class="dropdown">
+            <a href="/about">Our Story</a>
+            <a href="/plan-your-visit">Plan Your Visit</a>
+            <a href="/growing-practices">Growing Practices</a>
+            <a href="/mulch-wholesale">Mulch & Wholesale</a>
+            <a href="/employment">Employment</a>
+          </div>
+        </li>
+        <li><a href="/plan-your-visit" class="cta-btn">Plan Your Visit</a></li>
+      </ul>
+    </nav>
+    <button class="burger" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow">Long Valley, New Jersey</span>
+      <h1>A Family Farm <em>Six Generations</em> in the Making</h1>
+      <p class="lead">Pick-your-own berries, apples & pumpkins. A farm market full of Jersey Fresh produce, fresh-baked treats, homemade ice cream & seasonal festivals all year long.</p>
+      <div class="hero-btns">
+        <a href="#season" class="btn btn-primary">🍓 What's Picking Now</a>
+        <a href="#visit" class="btn btn-ghost">Plan Your Visit</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <span class="berry-tag">Open Today</span>
+      <h3>Hours & Hello</h3>
+      <div class="hours-row"><span><span class="dot"></span>Farm Market</span><b>8:00am – 7:00pm</b></div>
+      <div class="hours-row"><span><span class="dot"></span>Ice Cream</span><b>11:00am – 9:00pm</b></div>
+      <div class="hours-row"><span>📍 Location</span><b>25 Bartley Rd</b></div>
+      <div class="hours-row"><span>📞 Call</span><b>908-876-3351</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEASONAL -->
+<section class="season" id="season">
+  <div class="wrap inner">
+    <div>
+      <span class="kicker">In Season Now</span>
+      <h2>PYO Strawberries Are Open!</h2>
+      <p>Our fields are full of bright red, sun-ripened berries waiting to be picked. Bring the family, enjoy the farm, and make sweet memories this strawberry season. Pre-purchased tickets are required on festival weekends.</p>
+    </div>
+    <a href="https://ortfarms.ticketspice.com/ort-farms-2026-strawberry-season-" class="btn btn-primary">Purchase Tickets →</a>
+  </div>
+</section>
+
+<!-- EXPLORE -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Explore the Farm</span>
+      <h2>So Much to Do at Ort Farms</h2>
+      <p>From the fields to the farm market, there's something for every season and every member of the family.</p>
+    </div>
+    <div class="grid">
+      <div class="card"><div class="ph">🍓</div><div class="body"><h3>Pick Your Own</h3><p>Strawberries, apples, pumpkins & sunflowers — pick fresh, straight from our fields.</p><a href="/pick-your-own" class="lnk">Explore PYO →</a></div></div>
+      <div class="card"><div class="ph">🥖</div><div class="body"><h3>Farm Market</h3><p>Fresh produce, daily bakery, grab-and-go meals, decor & more. Open daily.</p><a href="/farm-market" class="lnk">Shop the Market →</a></div></div>
+      <div class="card"><div class="ph">🍦</div><div class="body"><h3>Homemade Ice Cream</h3><p>Made fresh on the farm — hard serve, soft serve & seasonal flavors.</p><a href="/ice-cream" class="lnk">See Flavors →</a></div></div>
+      <div class="card"><div class="ph">🎪</div><div class="body"><h3>Festivals & Events</h3><p>Berries & Brews, Summer Saturdays, Food Truck Fridays & our famous Fall Festival.</p><a href="/events" class="lnk">View Events →</a></div></div>
+      <div class="card"><div class="ph">🥕</div><div class="body"><h3>CSA Farm Share</h3><p>Join our 21-week CSA and eat fresh, local produce all season long.</p><a href="/csa" class="lnk">Join the CSA →</a></div></div>
+      <div class="card"><div class="ph">🐐</div><div class="body"><h3>Kid's Corner</h3><p>Friendly farm animals, swing sets, play structures & farm camp for the little ones.</p><a href="/kids-corner" class="lnk">Family Fun →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Why Ort Farms</span>
+      <h2>Rooted in Long Valley Since 1920</h2>
+      <p>A six-generation, family-owned-and-operated farm bringing you the best quality at a fair price — season after season.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">6</div><div class="lab">Generations of Farming</div></div>
+      <div class="stat"><div class="num">100+</div><div class="lab">Years Family-Owned</div></div>
+      <div class="stat"><div class="num">365</div><div class="lab">Days Market Open</div></div>
+      <div class="stat"><div class="num">21</div><div class="lab">Week CSA Share</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="events">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Happenings on the Farm</span>
+      <h2>Upcoming Events</h2>
+      <p>There's always something growing — and something going on — at Ort Farms.</p>
+    </div>
+    <div class="grid">
+      <div class="event"><span class="date">JUNE</span><h3>Berries & Brews Festival</h3><p>Celebrate strawberry season with picking, food & local brews for the whole family.</p><a href="/berries-and-brews" class="lnk">Get Tickets →</a></div>
+      <div class="event"><span class="date">JULY</span><h3>Summer Saturdays</h3><p>Kids' fun, Food Truck Fridays and weekend activities all summer long.</p><a href="/summer-saturdays" class="lnk">Learn More →</a></div>
+      <div class="event"><span class="date">SEPT–OCT</span><h3>Fall Festival</h3><p>Pumpkin picking, hayrides, our 5-acre corn maze, cider & doughnuts. NJ's best fall day out.</p><a href="/fall-festival" class="lnk">See Details →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN VISIT -->
+<section class="visit" id="visit">
+  <div class="wrap inner">
+    <div>
+      <span class="kicker" style="color:var(--barn);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem">Plan Your Visit</span>
+      <h2>Find Us in Long Valley, NJ</h2>
+      <ul class="info-list">
+        <li><span class="ic">📍</span><span><b>25 Bartley Rd</b>, Long Valley, NJ 07853</span></li>
+        <li><span class="ic">🕗</span><span>Farm Market — Open Daily 8:00am to 7:00pm</span></li>
+        <li><span class="ic">🍦</span><span>Ice Cream — Open Daily 11:00am to 9:00pm</span></li>
+        <li><span class="ic">📞</span><span>908-876-3351 · info@ortfarms.com</span></li>
+      </ul>
+      <div class="admission">
+        <b>Admission Policy:</b> No admission fee to visit our farm animals & kids' play area. Full-farm admission applies on PYO festival weekends.
+      </div>
+    </div>
+    <div class="map-box">
+      <div class="pin">📍</div>
+      <h3 style="color:#fff;font-size:1.4rem">Ort Farms</h3>
+      <p style="opacity:.9">25 Bartley Rd, Long Valley, NJ</p>
+      <a href="https://maps.google.com/?q=Ort+Farms+Long+Valley+NJ" class="btn btn-primary" style="margin-top:16px;background:var(--gold);color:var(--ink)">Get Directions →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Ort Farms</h4>
+        <p style="opacity:.85;font-size:.95rem">Six generations of farming and still growing for you. A family-owned farm in scenic Long Valley, New Jersey.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/ort_farms" aria-label="Instagram">📷</a>
+          <a href="https://www.facebook.com/ortfarms" aria-label="Facebook">f</a>
+        </div>
+      </div>
+      <div>
+        <h5>Visit</h5>
+        <ul>
+          <li><a href="/pick-your-own">Pick Your Own</a></li>
+          <li><a href="/farm-market">Farm Market</a></li>
+          <li><a href="/ice-cream">Ice Cream</a></li>
+          <li><a href="/events">Events & Festivals</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="/csa">CSA Farm Share</a></li>
+          <li><a href="/farm-camp">Farm Camp</a></li>
+          <li><a href="/field-trips">Field Trips</a></li>
+          <li><a href="/about">Our Story</a></li>
+        </ul>
+      </div>
+      <div class="foot-contact">
+        <h5>Get in Touch</h5>
+        <p>📍 25 Bartley Rd, Long Valley, NJ 07853</p>
+        <p>📞 908-876-3351</p>
+        <p>✉️ info@ortfarms.com</p>
+        <p>🕗 Market Daily 8am–7pm</p>
+      </div>
+    </div>
+    <div class="copy">© 2026 Ort Farms · Long Valley, NJ · All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.burger').addEventListener('click',function(){
+    var m=document.querySelector('.menu');
+    m.style.display = m.style.display==='flex' ? 'none':'flex';
+    m.style.position='absolute';m.style.top='64px';m.style.right='20px';
+    m.style.flexDirection='column';m.style.background='var(--paper)';
+    m.style.padding='14px';m.style.borderRadius='14px';
+    m.style.boxShadow='0 18px 40px rgba(38,32,15,.18)';
+  });
+</script>
+
+</body>
+</html>
